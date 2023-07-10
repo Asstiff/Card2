@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             card.getLayoutParams().height = (int) (oriHeight - Math.abs((event.getRawY() - oriRawY)/6));
                             card.getLayoutParams().width = (int) (oriWidth - Math.abs((event.getRawY() - oriRawY)/8));
-                            card.getLayoutParams().width = (int) (oriWidth - Math.abs((event.getRawX() - oriRawX)/4));
+                            card.getLayoutParams().width = (int) (oriWidth - Math.abs((event.getRawX() - oriRawX)/6));
                             card.requestLayout();
                             System.out.println(Math.abs((event.getRawY() - oriRawY)/12) + " " + Math.abs((event.getRawX() - oriRawX)/8));
                             break;
