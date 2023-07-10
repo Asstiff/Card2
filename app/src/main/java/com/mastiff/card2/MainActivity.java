@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 scaleAnimation.start();
                                 alphaAnimation.start();
-                                sf.setFinalPosition(-400);
+                                sf.setFinalPosition(340);
                                 sf2.setFinalPosition(40);
                                 sa.start();
                                 sa2.start();
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         scaleAnimation.start();
                         alphaAnimation.start();
-                        sf.setFinalPosition(-400);
+                        sf.setFinalPosition(340);
                         sf2.setFinalPosition(40);
                         sa.start();
                         sa2.start();
