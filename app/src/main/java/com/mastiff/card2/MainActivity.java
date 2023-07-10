@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         SpringAnimation sa2 = new SpringAnimation(card, DynamicAnimation.TRANSLATION_X);
         SpringForce sf2 = new SpringForce();
         sf2.setDampingRatio(SpringForce.DAMPING_RATIO_LOW_BOUNCY);
-        sf2.setStiffness(80f);
+        sf2.setStiffness(70f);
         sa2.setSpring(sf2);
 
         View root = findViewById(R.id.root);
@@ -119,8 +119,6 @@ public class MainActivity extends AppCompatActivity {
                             if(Math.abs(oriRawY - event.getRawY()) > 200 || Math.abs(oriRawX - event.getRawX()) > 200){
                                 sa.start();
                                 sa2.start();
-                                sf.setStiffness(80f);
-                                sf2.setStiffness(80f);
                                 rootView = (ViewGroup) findViewById(R.id.frameLayout);
                                 BlurView blurView = ((BlurView)card.findViewById(R.id.blurView));
                                 blurView.setupWith(rootView, new RenderEffectBlur());
@@ -147,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                                 alphaAnimation2 = new AlphaAnimation(card.findViewById(R.id.frag_img), 1);
                                 scaleAnimation2.setDuration(700);
                                 alphaAnimation2.setDuration(400);
-                                scaleAnimation2.setInterpolator(new PathInterpolator(0.3f,1.2f,0f,1f));
+                                scaleAnimation2.setInterpolator(new PathInterpolator(0.28f,1.3f,0f,1f));
                                 alphaAnimation2.setInterpolator(new PathInterpolator(0.4f,0.7f,0f,1f));
                                 scaleAnimation2.start();
                                 alphaAnimation2.start();
@@ -158,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
                                 blurView.setBlurEnabled(false);
                                 scaleAnimation = new ScaleAnimation(card, root.getWidth() - 200, root.getHeight() -1000);
                                 alphaAnimation = new AlphaAnimation(card.findViewById(R.id.frag_img), 0);
-                                scaleAnimation.setDuration(200);
-                                alphaAnimation.setDuration(100);
+                                scaleAnimation.setDuration(300);
+                                alphaAnimation.setDuration(200);
                                 scaleAnimation.setInterpolator(new PathInterpolator(0.4f,0.7f,0f,1f));
                                 alphaAnimation.setInterpolator(new PathInterpolator(0.7f,0f,0f,1f));
                                 if(scaleAnimation2 != null){
